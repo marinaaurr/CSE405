@@ -1,0 +1,1 @@
+student = { name: "Marina Urrutia", school: "CSUSB", idNumber: 004059925 };

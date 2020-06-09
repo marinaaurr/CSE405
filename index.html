@@ -11,24 +11,41 @@
 
 
 		<body>
-			<h1> Marina Urrutia</h1>
-				<h2>CSE 405</h2>
-				
+					<h1> Marina Urrutia</h1>
+						<h2>CSE 405</h2>
+						
 
-	<p id="java-json"></p>
+			<p id="java-json"></p>
 
-	<script>
-		var student, x,y,z;
-		student = { name: "Marina Urrutia", school: "CSUSB", idNumber: 004059925 };
-		x = student.name;
-		y= student.school;
-		z= student.idNumber;
+			<script>
+				var student, x,y,z;
+				student = { name: "Marina Urrutia", school: "CSUSB", idNumber: 004059925 };
+				x = student.name;
+				y= student.school;
+				z= student.idNumber;
 
 
-		document.getElementById("java-json").innerHTML = x;
-		document.getElementById("java-json").innerHTML = student.name + ", " + student.school + ", "+student.idNumber;
+				document.getElementById("java-json").innerHTML = x;
+				document.getElementById("java-json").innerHTML = student.name + ", " + student.school + ", "+student.idNumber;
 
-	</script>
+
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() 
+				{
+					  if (this.readyState == 4 && this.status == 200) 
+					    {
+						    var student = JSON.parse(this.responseText);
+						    document.getElementById("java-json").innerHTML = student.name;
+						}
+				};
+				xmlhttp.open("GET", "json_student.txt", true);
+				xmlhttp.send();
+			</script>
+
+
+			<p><a href="json_student.txt" target="_blank">json_student.txt</a></p>
+
+
 		</body>
 
 
