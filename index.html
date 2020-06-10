@@ -15,6 +15,13 @@
 						<h2>CSE 405</h2>
 						
 
+
+
+
+
+
+
+
 			<p id="java-json"></p>
 
 			<script>
@@ -46,7 +53,38 @@
 			<p><a href="json_student.txt" target="_blank">json_student.txt</a></p>
 
 
+
+
 		</body>
+
+
+		
+    <script defer src="/__/firebase/7.15.0/firebase-app.js"></script>
+
+    <script defer src="/__/firebase/7.15.0/firebase-auth.js"></script>
+
+    <script defer src="/__/firebase/init.js"></script>
+
+
+  </head>
+  <body>
+    <div id="msg">loading</div>
+
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', () =>{
+        document.getElementById('msg').innerHTML ="CSE 405 Marina Urrutia"
+      })
+
+      
+      
+    </script>
+
+      <h1>Student Database</h1>
+  <input type ="text" placeholder="name" id="studentname">
+  <input type ="text" placeholder="idNumber" id="idNUm">
+  <button onclick="writeData()">Submit</button>
 
 
 
